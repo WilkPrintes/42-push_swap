@@ -14,7 +14,7 @@ INCLUDE		:=	$(foreach directory, $(HEADER_DIR), -I $(directory))
 
 SRC_DIR		:= ./
 
-SRC_FILE	:=  push_swap.c moviments.c push_swap_utils.c
+SRC_FILE	:=  push_swap.c moviments.c push_swap_utils.c quick_sort.c
 
 SRC			:=	$(foreach file, $(SRC_FILE), $(SRC_DIR)$(file))
 
