@@ -34,5 +34,10 @@ void print_int(int *a, int len_a);
 int *find_index(int *a, int len_a);
 int right_max_a(int *a, int len_a);
 int right_max_b(int *b, int len_b);
+size_t    my_sqrt(int number);
+int *sort(int *a, int *b, int len_a, int len_b);
+int exist(int *values, int len_value, int value);
+int find_max(int *b, int len_b);
+int find_min(int *a, int len_a, int *values, int places);
 
 #endif
