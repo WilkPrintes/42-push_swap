@@ -4,17 +4,17 @@ CC			:= gcc
 
 LIBFT		:= ./includes/libft/libft.a
 
-LIBFT_PATH	:= ./includes/libft
+LIBFT_PATH	:= ./includes/libft/
 
 LIBFT_FLAGS	:= -L $(LIBFT_PATH) -lft
 
-HEADER_DIR	:= ./includes ./includes/libft
+HEADER_DIR	:= ./includes/ ./includes/libft/
 
 INCLUDE		:=	$(foreach directory, $(HEADER_DIR), -I $(directory))
 
 SRC_DIR		:= ./src/
 
-SRC_FILE	:=  push_swap.c moviments.c push_swap_utils.c
+SRC_FILE	:=  push_swap.c moviments1.c moviments2.c push_swap_utils.c marge_sort_utils.c
 
 SRC			:=	$(foreach file, $(SRC_FILE), $(SRC_DIR)$(file))
 

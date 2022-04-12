@@ -24,7 +24,7 @@ char	*ft_utoa(unsigned int n)
 
 	if (n == 0)
 		return (ft_strdup("0"));
-	if (n < 0)
+	if ((int) n < 0)
 		n = n * (-1);
 	d_places = decimal_places(n);
 	index = 0;
@@ -36,15 +36,12 @@ char	*ft_utoa(unsigned int n)
 
 static int	decimal_places(unsigned int i)
 {
-	unsigned int	total;
 	unsigned int	count;
 
 	count = 0;
-	total = 0;
 	while (i > 0)
 	{
 		i = i / 10;
-		total = 10 * 10;
 		count++;
 	}
 	return (count);
