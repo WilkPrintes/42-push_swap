@@ -2,17 +2,17 @@ NAME		:= push_swap
 
 CC			:= gcc
 
-LIBFT		:= ./libft/libft.a
+LIBFT		:= ./includes/libft/libft.a
 
-LIBFT_PATH	:= ./libft
+LIBFT_PATH	:= ./includes/libft
 
 LIBFT_FLAGS	:= -L $(LIBFT_PATH) -lft
 
-HEADER_DIR	:= ./ ./libft
+HEADER_DIR	:= ./includes ./includes/libft
 
 INCLUDE		:=	$(foreach directory, $(HEADER_DIR), -I $(directory))
 
-SRC_DIR		:= ./
+SRC_DIR		:= ./src/
 
 SRC_FILE	:=  push_swap.c moviments.c push_swap_utils.c
 
