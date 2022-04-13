@@ -6,7 +6,7 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 23:51:04 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/12 00:43:34 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/13 00:13:48 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,22 @@ int	right_order(int *a, int len_a, int len_b)
 
 int	*char_to_int(int argc, char **argv)
 {
-	int	i;
-	int	*a;
+	int			i;
+	int			*a;
+	long int	temp;
 
 	i = 0;
 	a = malloc (sizeof(int) * (argc - 1));
 	while ((i + 1) < argc)
 	{
-		a[i] = ft_atoi(argv[i + 1]);
+		temp = ft_atoi(argv[i + 1]);
+		if (exist(a, i, temp) == 1)
+			return (NULL);
+		if (temp > 2147483647)
+			return (NULL);
+		if (temp < -2147483648)
+			return (NULL);
+		a[i] = (int) temp;
 		i++;
 	}
 	return (a);

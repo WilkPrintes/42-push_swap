@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
+/*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 00:40:12 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/03 13:48:26 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/12 17:28:37 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
+		return (1);
+	if (c == '-')
 		return (1);
 	return (0);
 }

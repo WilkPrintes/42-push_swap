@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wprintes <wilkp90@gmail.com>               +#+  +:+       +#+        */
+/*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 23:33:03 by wprintes          #+#    #+#             */
-/*   Updated: 2021/10/03 18:52:26 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/13 00:11:35 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	init_var(int *n1, int *n2, int *n3);
+static void	init_var(long int *n1, long int *n2, int *n3);
 static int	is_whitespace(const char c);
 
-int	ft_atoi(const char *str)
+long int	ft_atoi(const char *str)
 {
-	int		result;
-	int		increment;
-	int		negative;
+	long int		result;
+	long int		increment;
+	int				negative;
 
 	init_var(&result, &increment, &negative);
 	if (*str == '\0')
@@ -42,7 +42,7 @@ int	ft_atoi(const char *str)
 	return (result);
 }
 
-static void	init_var(int *n1, int *n2, int *n3)
+static void	init_var(long int *n1, long int *n2, int *n3)
 {
 	*n1 = 0;
 	*n2 = 10;
