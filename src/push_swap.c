@@ -6,7 +6,7 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 15:21:56 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/14 01:21:05 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:35:19 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char *argv[])
 			return (0);
 		a = char_to_int(argc, argv);
 		if (a == NULL)
-			error(0);
+			return (error(0));
 		len_a = argc - 1;
 		if (right_order(a, argc - 1, 0) == 0)
 		{

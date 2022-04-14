@@ -6,7 +6,7 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 23:51:04 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/13 18:13:17 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:34:55 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,10 @@ int	*char_to_int(int argc, char **argv)
 	{
 		temp = ft_atoi(argv[i + 1]);
 		if (exist(a, i, temp) == 1)
+		{
+			free(a);
 			return (NULL);
+		}	
 		if (temp > 2147483647)
 			return (NULL);
 		if (temp < -2147483648)

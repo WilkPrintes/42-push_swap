@@ -6,7 +6,7 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 00:57:28 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/12 01:00:27 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:39:17 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,15 @@ int	rrb(int **b, int len_b)
 	ft_putstr("rrb\n");
 }
 
-int	sb(int **b)
+int	sb(int **b, int type)
 {
 	int	temp;
 
 	temp = b[0][0];
 	b[0][0] = b[0][1];
 	b[0][1] = temp;
-	ft_putstr("sb\n");
+	if (type == 0)
+		ft_putstr("sb\n");
 	return (1);
 }
 

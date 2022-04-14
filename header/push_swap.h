@@ -6,7 +6,7 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 15:30:06 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/14 00:10:18 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:39:38 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 # include <stdlib.h>
 # include "libft.h"
 
-int		sa(int **a);
-int		sb(int **b);
+int		sa(int **a, int type);
+int		sb(int **b, int type);
 int		ss(int **a, int **b);
 int		pb(int **a, int **b, int *len_b, int *len_a);
 int		pa(int **a, int **b, int *len_b, int *len_a);

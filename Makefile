@@ -8,7 +8,7 @@ LIBFT_PATH	:= ./includes/libft/
 
 LIBFT_FLAGS	:= -L $(LIBFT_PATH) -lft
 
-HEADER_DIR	:= ./header ./includes/libft/
+HEADER_DIR	:= ./header/ ./includes/libft/
 
 INCLUDE		:=	$(foreach directory, $(HEADER_DIR), -I $(directory))
 
