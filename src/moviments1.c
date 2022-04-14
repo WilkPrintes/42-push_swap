@@ -6,11 +6,14 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 23:46:40 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/12 01:10:49 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:14:07 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	init_b(int**a, int **b, int *len_b);
+int		*init_temp(int**a, int **b, int *len_b, int *len_a);
 
 int	sa(int **a)
 {
@@ -28,21 +31,7 @@ int	pb(int **a, int **b, int *len_b, int *len_a)
 	int	*temp;
 	int	i;
 
-	i = 0;
-	temp = malloc (sizeof(int) * (len_b[0] + 1));
-	while (i < len_b[0])
-	{
-		temp[i] = b[0][i];
-		i++;
-	}
-	b[0][0] = a[0][0];
-	i = 0;
-	while (i < len_b[0])
-	{
-		b[0][i + 1] = temp[i];
-		i++;
-	}
-	free(temp);
+	init_b(a, b, len_b);
 	i = 0;
 	len_a[0]--;
 	temp = malloc (sizeof(int) * (len_a[0]));
@@ -65,7 +54,51 @@ int	pb(int **a, int **b, int *len_b, int *len_a)
 	return (1);
 }
 
+void	init_b(int**a, int **b, int *len_b)
+{
+	int	*temp;
+	int	i;
+
+	i = 0;
+	temp = malloc (sizeof(int) * (len_b[0] + 1));
+	while (i < len_b[0])
+	{
+		temp[i] = b[0][i];
+		i++;
+	}
+	b[0][0] = a[0][0];
+	i = 0;
+	while (i < len_b[0])
+	{
+		b[0][i + 1] = temp[i];
+		i++;
+	}
+	free (temp);
+}
+
 int	pa(int **a, int **b, int *len_b, int *len_a)
+{
+	int	*temp;
+	int	i;
+
+	i = 0;
+	temp = init_temp(a, b, len_b, len_a);
+	free(a[0]);
+	len_a[0]++;
+	a[0] = malloc (sizeof(int) * len_a[0]);
+	i = 0;
+	while (i < len_a[0])
+	{
+		a[0][i] = temp[i];
+		i++;
+	}
+	free(temp);
+	len_b[0]--;
+	ft_putstr("pa\n");
+	return (1);
+}
+
+int	*init_temp(int**a, int **b, int *len_b, int *len_a)
 {
 	int	*temp;
 	int	i;
@@ -87,67 +120,5 @@ int	pa(int **a, int **b, int *len_b, int *len_a)
 		temp[i + 1] = a[0][i];
 		i++;
 	}
-	free(a[0]);
-	len_a[0]++;
-	a[0] = malloc (sizeof(int) * len_a[0]);
-	i = 0;
-	while (i < len_a[0])
-	{
-		a[0][i] = temp[i];
-		i++;
-	}
-	free(temp);
-	len_b[0]--;
-	ft_putstr("pa\n");
-	return (1);
-}
-
-int	ra(int **a, int len_a)
-{
-	int	i;
-	int	init;
-	int	*temp;
-
-	i = 0;
-	init = a[0][0];
-	temp = malloc (sizeof(int) * len_a);
-	while (i < len_a - 1)
-	{
-		temp[i] = a[0][i + 1];
-		i++;
-	}
-	temp[i] = init;
-	i = 0;
-	while (i < len_a)
-	{
-		a[0][i] = temp[i];
-		i++;
-	}
-	free(temp);
-	ft_putstr("ra\n");
-}
-
-int	rb(int **b, int len_b)
-{
-	int	i;
-	int	init;
-	int	*temp;
-
-	i = 0;
-	init = b[0][0];
-	temp = malloc (sizeof(int) * len_b);
-	while (i + 1 < len_b)
-	{
-		temp[i] = b[0][i + 1];
-		i++;
-	}
-	temp[i] = init;
-	i = 0;
-	while (i < len_b)
-	{
-		b[0][i] = temp[i];
-		i++;
-	}
-	free(temp);
-	ft_putstr("rb\n");
+	return (temp);
 }

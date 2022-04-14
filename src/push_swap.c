@@ -6,7 +6,7 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 15:21:56 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/14 00:16:46 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:21:05 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	validations(char *argv[], int argc)
 			if (ft_isdigit(argv[i][index]) == 0)
 			{
 				ft_putstr("Error\n");
-				return (1);
+				exit (1);
 			}
 			index++;
 		}
