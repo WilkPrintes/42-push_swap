@@ -6,7 +6,7 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 23:46:40 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/14 01:38:52 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:44:02 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,14 @@
 void	init_b(int**a, int **b, int *len_b);
 int		*init_temp(int**a, int **b, int *len_b, int *len_a);
 
-int	sa(int **a, int type)
+int	sa(int **a)
 {
 	int	temp;
 
 	temp = a[0][0];
 	a[0][0] = a[0][1];
 	a[0][1] = temp;
-	if (type == 0)
-		ft_putstr("sa\n");
+	ft_putstr("sa\n");
 	return (1);
 }
 

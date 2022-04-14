@@ -6,7 +6,7 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 00:20:07 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/13 15:25:46 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:51:31 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	push_b(int **a, int *len_a, int **b, int *len_b)
 			if (exist(values, len_v, a[0][0]) != 0)
 				push = push + pb(a, b, len_b, len_a);
 			else
-				ra(a, len_a[0]);
+				ra(a, len_a[0], 0);
 		}
 		free(values);
 		divs--;
@@ -61,12 +61,12 @@ void	push_a(int *a, int len_a, int *b, int len_b)
 		else if (max > len_b / 2)
 		{
 			while (find_max(b, len_b) != 0)
-				rrb(&b, len_b);
+				rrb(&b, len_b, 0);
 		}
 		else
 		{
 			while (find_max(b, len_b) != 0)
-				rb(&b, len_b);
+				rb(&b, len_b, 0);
 		}
 	}
 	free(a);

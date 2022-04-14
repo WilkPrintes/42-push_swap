@@ -6,13 +6,13 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 00:57:28 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/14 01:39:17 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:51:09 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	rra(int **a, int len_a)
+int	rra(int **a, int len_a, int type)
 {
 	int	i;
 	int	init;
@@ -34,10 +34,11 @@ int	rra(int **a, int len_a)
 		i++;
 	}
 	free(temp);
-	ft_putstr("rra\n");
+	if (type == 0)
+		ft_putstr("rra\n");
 }
 
-int	rrb(int **b, int len_b)
+int	rrb(int **b, int len_b, int type)
 {
 	int	i;
 	int	init;
@@ -59,18 +60,18 @@ int	rrb(int **b, int len_b)
 		i++;
 	}
 	free(temp);
-	ft_putstr("rrb\n");
+	if (type == 0)
+		ft_putstr("rrb\n");
 }
 
-int	sb(int **b, int type)
+int	sb(int **b)
 {
 	int	temp;
 
 	temp = b[0][0];
 	b[0][0] = b[0][1];
 	b[0][1] = temp;
-	if (type == 0)
-		ft_putstr("sb\n");
+	ft_putstr("sb\n");
 	return (1);
 }
 

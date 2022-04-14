@@ -6,7 +6,7 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 00:09:24 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/14 00:18:10 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:50:42 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	moviments(int *a, int *b, int len_a, int len_b)
 		if (a[1] < a[0])
 			mov = mov + sa(&a);
 		else if (a[len_a - 1] < a[0])
-			mov = mov + rra(&a, len_a);
+			mov = mov + rra(&a, len_a, 0);
 		else if (len_b == 0)
 		{
 			pb(&a, &b, &len_b, &len_a);

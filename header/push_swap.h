@@ -6,7 +6,7 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 15:30:06 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/14 01:39:38 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:52:43 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 # include <stdlib.h>
 # include "libft.h"
 
-int		sa(int **a, int type);
-int		sb(int **b, int type);
+int		sa(int **a);
+int		sb(int **b);
 int		ss(int **a, int **b);
 int		pb(int **a, int **b, int *len_b, int *len_a);
 int		pa(int **a, int **b, int *len_b, int *len_a);
-int		ra(int **a, int len_a);
-int		rb(int **b, int len_b);
-int		rra(int **a, int len_a);
-int		rrb(int **b, int len_b);
+int		ra(int **a, int len_a, int type);
+int		rb(int **b, int len_b, int type);
+void	rr(int *a, int len_a, int *b, int len_b);
+int		rra(int **a, int len_a, int type);
+int		rrb(int **b, int len_b, int type);
+void	rrr(int *a, int len_a, int *b, int len_b);
 int		*char_to_int(int argc, char **argv);
 int		right_order(int *a, int len_a, int len_b);
 int		exist(int *a, int len, int value);

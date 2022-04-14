@@ -6,13 +6,13 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 01:13:46 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/14 01:14:15 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:53:18 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ra(int **a, int len_a)
+int	ra(int **a, int len_a, int type)
 {
 	int	i;
 	int	init;
@@ -34,10 +34,11 @@ int	ra(int **a, int len_a)
 		i++;
 	}
 	free(temp);
-	ft_putstr("ra\n");
+	if (type == 0)
+		ft_putstr("ra\n");
 }
 
-int	rb(int **b, int len_b)
+int	rb(int **b, int len_b, int type)
 {
 	int	i;
 	int	init;
@@ -59,5 +60,20 @@ int	rb(int **b, int len_b)
 		i++;
 	}
 	free(temp);
-	ft_putstr("rb\n");
+	if (type == 0)
+		ft_putstr("rb\n");
+}
+
+void	rr(int *a, int len_a, int *b, int len_b)
+{
+	ra(&a, len_a, 1);
+	rb(&b, len_b, 1);
+	ft_putstr("rr");
+}
+
+void	rrr(int *a, int len_a, int *b, int len_b)
+{
+	rra(&a, len_a, 1);
+	rrb(&b, len_b, 1);
+	ft_putstr("rrr");
 }
