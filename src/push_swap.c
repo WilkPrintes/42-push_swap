@@ -6,15 +6,14 @@
 /*   By: wprintes <wprintes@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 15:21:56 by wprintes          #+#    #+#             */
-/*   Updated: 2022/04/13 15:24:39 by wprintes         ###   ########.fr       */
+/*   Updated: 2022/04/14 00:16:46 by wprintes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
-int	validations(char *argv[], int argc);
-void low_sort(int *a, int len_a);
+int		validations(char *argv[], int argc);
+int		low_sort(int *a, int len_a);
 
 int	main(int argc, char *argv[])
 {
@@ -27,10 +26,7 @@ int	main(int argc, char *argv[])
 			return (0);
 		a = char_to_int(argc, argv);
 		if (a == NULL)
-		{
-			ft_putstr("Error\n");
-			return (0);
-		}
+			error(0);
 		len_a = argc - 1;
 		if (right_order(a, argc - 1, 0) == 0)
 		{
@@ -74,25 +70,16 @@ int	validations(char *argv[], int argc)
 	return (0);
 }
 
-void low_sort(int *a, int len_a)
+int	low_sort(int *a, int len_a)
 {
-	int i;
-	int min;
-	int *b;
-	int len_b;
-	int max;
-	
-	i = 0;
-	min = a[i];
-	b = malloc (sizeof(int) * len_a);
+	int	*b;
+	int	len_b;
+
 	len_b = 0;
-	if (len_a == 2)
-	{
-		if (a[0] > a[1])
-			sa(&a);
-		return ;
-	}
-	marge_sort(a, len_a);
+	b = malloc (sizeof(int) * len_a);
+	moviments(a, b, len_a, len_b);
+	free(b);
+	return (0);
 }
 
 void	marge_sort(int *a, int len_a)
