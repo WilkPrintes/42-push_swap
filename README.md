@@ -1,31 +1,33 @@
 # 42-push_swap
-Esse projeto consiste em criar um algoritmo de ordenação otimizado usando duas pilas e movimentos específicos.
+## Esse projeto consiste em criar um algoritmo de ordenação otimizado usando duas pilas e movimentos específicos.
 
-# sa (swap a): Troca os 2 primeiros elementos no topo da pilha a.
+### Movimentos
 
-# sb (swap b): Troca os 2 primeiros elementos no topo da pilha b.
+- sa (swap a): Troca os 2 primeiros elementos no topo da pilha a.
 
-# ss : sa e sb ao mesmo tempo.
+- sb (swap b): Troca os 2 primeiros elementos no topo da pilha b.
 
-# pa (pressione a): Pegue o primeiro elemento no topo de b e coloque-o no topo de a.
+- ss : sa e sb ao mesmo tempo.
 
-# pb (push b): Pegue o primeiro elemento no topo de a e coloque-o no topo de b.
+- pa (push a): Pegue o primeiro elemento no topo de b e coloque-o no topo de a.
 
-# ra (girar a): Deslocar todos os elementos da pilha a por 1.
-O primeiro elemento torna-se o último.
+- pb (push b): Pegue o primeiro elemento no topo de a e coloque-o no topo de b.
 
-# rb (girar b): Desloca todos os elementos da pilha b por 1.
+- ra (rotate a): Deslocar todos os elementos da pilha a por 1.
+     O primeiro elemento torna-se o último.
 
-O primeiro elemento torna-se o último.
+- rb (rotate b): Desloca todos os elementos da pilha b por 1.
 
-# rr : ra e rb ao mesmo tempo.
+     O primeiro elemento torna-se o último.
 
-# rra (rotação reversa a): Desloca todos os elementos da pilha a por 1.
+- rr : ra e rb ao mesmo tempo.
 
-O último elemento torna-se o primeiro.
+- rra (reverse rotate a): Desloca todos os elementos da pilha a por 1.
 
-# rrb (rotação reversa b): Desloca todos os elementos da pilha b por 1.
+    O último elemento torna-se o primeiro.
 
-O último elemento torna-se o primeiro.
+- rrb (reverse rotate b): Desloca todos os elementos da pilha b por 1.
 
-#rrr: rra e rrb ao mesmo tempo 
+    O último elemento torna-se o primeiro.
+
+-rrr: rra e rrb ao mesmo tempo.
